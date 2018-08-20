@@ -1,0 +1,25 @@
+#include<stdio.h>
+void main()
+{
+    int hr,min,sec,hr2,min2,sec2,dh,dm,ds;
+    scanf("%d:%d:%d",&hr,&min,&sec);
+    scanf("%d:%d:%d",&hr2,&min2,&sec2);
+    if(sec2>sec)
+    {
+        --min;
+        sec+=60;
+    }
+    ds=sec-sec2;
+    if(min2>min)
+    {
+        --hr;
+        min+=60;
+    }
+    dm=min-min2;
+    if(hr2>hr)
+    {
+        hr+=24;
+    }
+    dh=hr-hr2;
+    printf("%d:%d:%d",dh,dm,ds);
+}
